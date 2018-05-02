@@ -9,7 +9,7 @@ def scan():
         devices = scanner.scan(3)  # List of ScanEntry objects
         for dev in devices:
             for (adtype, desc, value) in dev.getScanData():
-                if "Thunder Sense" in desc:
+                if "Thunder Sense" in value:
                     print("addr {}, addrtype {}, value {}".format(dev.addr, dev.addrType, value))
 
 
